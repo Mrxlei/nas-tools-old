@@ -53,3 +53,4 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/nas-tools:latest
             ${{ secrets.DOCKER_USERNAME }}/nas-tools:${{ env.app_version }}
+          
