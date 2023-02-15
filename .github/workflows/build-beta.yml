@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - dev
+      - dev1
     paths:
       - version.py
       - docker/Dockerfile.beta
