@@ -8,7 +8,7 @@ on:
       - version.py
       - docker/Dockerfile
       - docker/Dockerfile.lite
-      - .github/workflows/build.yml
+      - .github/workflows/build1.yml
       - requirements.txt
 jobs:
   build:
