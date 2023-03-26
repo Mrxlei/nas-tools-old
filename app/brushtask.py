@@ -395,6 +395,9 @@ class BrushTask(object):
                 else:
                     # 将查询的torrent_ids转为数字型
                     torrent_ids = [int(x) for x in torrent_ids if str(x).isdigit()]
+                    # 避免种子被全删，没有种子ID的不处理
+                    if not torrent_ids:
+                        continue
                     # 检查完成状态
                     downloader = Transmission(config=downloader_cfg)
                     torrents, has_err = downloader.get_torrents(ids=torrent_ids, status=["seeding", "seed_pending"])
